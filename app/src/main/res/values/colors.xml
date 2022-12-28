@@ -13,10 +13,12 @@
     <color name="blue">#3b7fac</color>
     <color name="red">#a94239</color>
     <color name="green">#70c385</color>
+    <color name="background">#f2f2f2</color>
 
     <!--  Circle colors  -->
     <color name="circle_gray">#556080</color>
     <color name="circle_yellow">#f0c41b</color>
+    <color name="circle_user">#888888</color>
 
     <!--  Table colors  -->
     <color name="turquoise">#4ac8d4</color>
