@@ -26,4 +26,7 @@
     <color name="pink">#fadbd8</color>
     <color name="frame">#c0eaf0</color>
 
+    <color name="background_edittext">#0D000000</color>
+    <color name="header">#3f51b5</color>
+
 </resources>

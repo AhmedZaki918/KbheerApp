@@ -7,6 +7,22 @@
     <string name="connection_error">Please check your internet connection</string>
     <string name="date">سبتمبر, 2019</string>
     <string name="total_salary">إجمالى الراتب :</string>
+    <string name="employer_salary">راتب الموظف</string>
+    <string name="worth">الاستحقاقات</string>
+    <string name="deductions">الاستقطاعات</string>
+    <string name="index_name">م</string>
+    <string name="item">البند</string>
+    <string name="value">القيمة</string>
+    <string name="_1">1</string>
+    <string name="main_salary">مرتب اساسى</string>
+    <string name="_2">2</string>
+    <string name="environment_work">طبيعة عمل</string>
+    <string name="_3">3</string>
+    <string name="other_deductions">استقطاعات اخرى</string>
+    <string name="login">تسجيل دخول</string>
+    <string name="mobile_number">الهاتف المحمول</string>
+    <string name="password">كلمة المرور</string>
+    <string name="missing_values">بعض البيانات فارغة</string>
 
     <array name="salary_colors">
         <item name="bg_screen1">@color/circle_gray</item>
