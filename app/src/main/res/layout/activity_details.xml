@@ -17,16 +17,27 @@
             android:id="@+id/tv_custom_actionbar"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintHeight_percent="0.10"
-            android:text="@string/employer_salary"
-            android:textColor="@color/white"
-            android:textStyle="bold"
             android:background="@color/header"
             android:gravity="center"
+            android:text="@string/employer_salary"
+            android:textColor="@color/white"
             android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.10"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_custom_actionbar" />
 
         <!--   Header  -->
         <androidx.cardview.widget.CardView
@@ -36,6 +47,8 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
+            android:visibility="invisible"
+            tools:visibility="visible"
             app:cardCornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -78,11 +91,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    tools:text="@string/date"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="@+id/cv_person"
                     app:layout_constraintStart_toStartOf="@+id/cv_person"
-                    app:layout_constraintTop_toBottomOf="@+id/cv_person" />
+                    app:layout_constraintTop_toBottomOf="@+id/cv_person"
+                    tools:text="@string/date" />
 
                 <!--  Employer name  -->
                 <TextView
@@ -90,13 +103,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
-                    tools:text="محمد عزب محمد"
                     android:textColor="@color/gray"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toStartOf="@+id/cv_person"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="محمد عزب محمد" />
 
                 <!--  Job title  -->
                 <TextView
@@ -104,13 +117,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    tools:text="طبيب اختصاصى مسالك بولية"
                     android:textColor="@color/gray"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="@+id/tv_name"
                     app:layout_constraintStart_toStartOf="@+id/tv_name"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                    tools:text="طبيب اختصاصى مسالك بولية" />
 
                 <!--  Total salary label  -->
                 <TextView
@@ -133,11 +146,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="8dp"
-                    tools:text="-347.20 ج"
                     android:textColor="@color/red"
                     android:textSize="20sp"
                     app:layout_constraintEnd_toStartOf="@+id/tv_total_salary_label"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_job_title" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_job_title"
+                    tools:text="-347.20 ج" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -146,13 +159,15 @@
 
         <!--   Bottom section -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/cv_bottom_section"
+            android:id="@+id/cv_footer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="32dp"
+            android:visibility="invisible"
+            tools:visibility="visible"
             app:cardCornerRadius="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -185,12 +200,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
-                    tools:text="773.23 ج"
                     android:textColor="@color/red"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="@+id/iv_square_gray"
                     app:layout_constraintEnd_toStartOf="@+id/iv_square_gray"
-                    app:layout_constraintTop_toTopOf="@+id/iv_square_gray" />
+                    app:layout_constraintTop_toTopOf="@+id/iv_square_gray"
+                    tools:text="773.23 ج" />
 
                 <!--  Worth label -->
                 <TextView
@@ -234,12 +249,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
-                    tools:text="1120.43 ج"
                     android:textColor="@color/red"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="@+id/iv_square_yellow"
                     app:layout_constraintEnd_toStartOf="@+id/iv_square_yellow"
-                    app:layout_constraintTop_toTopOf="@+id/iv_square_yellow" />
+                    app:layout_constraintTop_toTopOf="@+id/iv_square_yellow"
+                    tools:text="1120.43 ج" />
 
                 <!--  Deductions  label -->
                 <TextView
@@ -287,12 +302,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
-                    tools:text="-347.20 ج"
                     android:textColor="@color/red"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="@+id/iv_square_green"
                     app:layout_constraintEnd_toStartOf="@+id/iv_square_green"
-                    app:layout_constraintTop_toTopOf="@+id/iv_square_green" />
+                    app:layout_constraintTop_toTopOf="@+id/iv_square_green"
+                    tools:text="-347.20 ج" />
 
 
                 <!--  Total salary label -->
@@ -301,7 +316,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
-                    android:text="@string/total_salary"
+                    android:text="@string/total_salary_middle"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toStartOf="@+id/tv_total_salary_bottom"
@@ -452,14 +467,14 @@
                     android:layout_height="wrap_content"
                     android:paddingTop="16sp"
                     android:paddingBottom="16dp"
-                    tools:text="673.23 ج"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     app:layout_constraintEnd_toStartOf="@+id/line_4"
                     app:layout_constraintStart_toStartOf="@+id/line_5"
                     app:layout_constraintTop_toBottomOf="@+id/tv_value"
-                    app:layout_constraintWidth_percent="0.35" />
+                    app:layout_constraintWidth_percent="0.35"
+                    tools:text="673.23 ج" />
 
 
                 <!--  Index 2 -->
@@ -507,14 +522,14 @@
                     android:background="@color/blue_light"
                     android:paddingTop="16sp"
                     android:paddingBottom="16dp"
-                    tools:text="100.0 ج"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     app:layout_constraintEnd_toStartOf="@+id/line_4"
                     app:layout_constraintStart_toEndOf="@+id/line_5"
                     app:layout_constraintTop_toBottomOf="@+id/tv_main_salary"
-                    app:layout_constraintWidth_percent="0.35" />
+                    app:layout_constraintWidth_percent="0.35"
+                    tools:text="100.0 ج" />
 
 
                 <!--  Index 3 -->
@@ -561,14 +576,14 @@
                     android:background="@color/pink"
                     android:paddingTop="16sp"
                     android:paddingBottom="16dp"
-                    tools:text="1120.43 ج"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     app:layout_constraintEnd_toStartOf="@+id/line_4"
                     app:layout_constraintStart_toEndOf="@+id/line_5"
                     app:layout_constraintTop_toBottomOf="@+id/tv_work_environment"
-                    app:layout_constraintWidth_percent="0.35" />
+                    app:layout_constraintWidth_percent="0.35"
+                    tools:text="1120.43 ج" />
 
 
                 <!-- Bottom Line of table -->
@@ -580,8 +595,7 @@
                     android:background="@color/turquoise"
                     app:layout_constraintEnd_toEndOf="@+id/tv_index_3"
                     app:layout_constraintStart_toStartOf="@+id/tv_other_deductions"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_other_deductions_label"
-                    />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_other_deductions_label" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

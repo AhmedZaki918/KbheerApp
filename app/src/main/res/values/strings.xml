@@ -23,6 +23,7 @@
     <string name="mobile_number">الهاتف المحمول</string>
     <string name="password">كلمة المرور</string>
     <string name="missing_values">بعض البيانات فارغة</string>
+    <string name="total_salary_middle">إجمالى الراتب</string>
 
     <array name="salary_colors">
         <item name="bg_screen1">@color/circle_gray</item>

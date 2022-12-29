@@ -27,8 +27,10 @@ class MainActivity : AppCompatActivity() {
         viewModel.token.observe(this){token ->
             if (token != ""){
                 startActivity(Intent(this, DetailsActivity::class.java))
+                finish()
             } else {
                 startActivity(Intent(this, LoginActivity::class.java))
+                finish()
             }
         }
     }

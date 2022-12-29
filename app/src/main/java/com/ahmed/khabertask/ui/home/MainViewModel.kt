@@ -6,8 +6,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.ahmed.khabertask.data.local.Constants.TOKEN_KEY
-import com.ahmed.khabertask.data.model.LoginRequest
-import com.ahmed.khabertask.data.model.LoginResponse
+import com.ahmed.khabertask.data.model.login.LoginRequest
+import com.ahmed.khabertask.data.model.login.LoginResponse
 import com.ahmed.khabertask.data.network.Resource
 import com.ahmed.khabertask.data.repository.MainRepo
 import com.ahmed.khabertask.util.DataStoreRepo

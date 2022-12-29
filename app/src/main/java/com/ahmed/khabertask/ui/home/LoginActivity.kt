@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.ahmed.khabertask.R
 import com.ahmed.khabertask.data.local.Constants.TOKEN_KEY
-import com.ahmed.khabertask.data.model.LoginRequest
-import com.ahmed.khabertask.data.model.LoginResponse
+import com.ahmed.khabertask.data.model.login.LoginRequest
+import com.ahmed.khabertask.data.model.login.LoginResponse
 import com.ahmed.khabertask.data.network.Resource
 import com.ahmed.khabertask.databinding.ActivityLoginBinding
 import com.ahmed.khabertask.ui.details.DetailsActivity
@@ -59,7 +59,7 @@ class LoginActivity : AppCompatActivity(), OnClickListener {
         binding.apply {
             mobileNumber = etMobileNumber.text.toString().trim()
             password = etPassword.text.toString().trim()
-            return mobileNumber.isNotEmpty() || password.isNotEmpty()
+            return mobileNumber.isNotEmpty() && password.isNotEmpty() && !password.contains(" ")
         }
     }
 
@@ -67,9 +67,13 @@ class LoginActivity : AppCompatActivity(), OnClickListener {
     private fun updateUi(response: Resource<LoginResponse>?) {
         switchVisibility(false)
         if (response is Resource.Success) {
-            viewModel.saveToken(TOKEN_KEY, response.value.Token!!)
             toast(response.value.ArabicMessage)
-            startActivity(Intent(this, DetailsActivity::class.java))
+            if (response.value.Token != null) {
+                viewModel.saveToken(TOKEN_KEY, response.value.Token)
+                startActivity(Intent(this, DetailsActivity::class.java))
+                finish()
+            }
+
         } else {
             handleApiError(response as Resource.Failure)
         }

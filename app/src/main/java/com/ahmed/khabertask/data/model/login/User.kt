@@ -1,4 +1,4 @@
-package com.ahmed.khabertask.data.model
+package com.ahmed.khabertask.data.model.login
 
 data class User(
     val PhoneNumberConfirmed: Boolean? = false,

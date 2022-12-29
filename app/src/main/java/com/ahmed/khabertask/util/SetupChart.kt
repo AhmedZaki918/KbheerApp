@@ -13,7 +13,9 @@ import com.github.mikephil.charting.formatter.PercentFormatter
 
 class SetupChart(
     private val pieChart: PieChart,
-    context: Context
+    context: Context,
+    private val deduction: Float,
+    private val allowances: Float
 ) {
 
     private var customColors =
@@ -30,8 +32,8 @@ class SetupChart(
 
     fun loadPieChartData() {
         val entries: ArrayList<PieEntry> = ArrayList()
-        entries.add(PieEntry(0.4084f, ""))
-        entries.add(PieEntry(0.5916f, ""))
+        entries.add(PieEntry(allowances, ""))
+        entries.add(PieEntry(deduction, ""))
         val colors: ArrayList<Int> = ArrayList()
 
         for (color in customColors) {
@@ -43,7 +45,7 @@ class SetupChart(
         PieData(dataSet).apply {
             setDrawValues(true)
             setValueFormatter(PercentFormatter(pieChart))
-            setValueTextSize(12f)
+            setValueTextSize(14f)
             setValueTextColor(Color.WHITE)
             pieChart.data = this
         }

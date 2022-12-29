@@ -1,4 +1,4 @@
-package com.ahmed.khabertask.data.model
+package com.ahmed.khabertask.data.model.login
 
 data class LoginResponse(
     val AccountId: Int? = 0,
