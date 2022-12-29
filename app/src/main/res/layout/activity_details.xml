@@ -133,7 +133,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_bottom_section"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
@@ -148,7 +148,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl_bottom_section"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:paddingBottom="8dp">
 
                 <!--  Gray square  -->
                 <ImageView
@@ -280,7 +281,6 @@
 
 
                 <!--  Total salary label -->
-
                 <TextView
                     android:id="@+id/tv_total_salary_label_bottom"
                     android:layout_width="wrap_content"
@@ -291,6 +291,282 @@
                     android:textSize="18sp"
                     app:layout_constraintEnd_toStartOf="@+id/tv_total_salary_bottom"
                     app:layout_constraintTop_toTopOf="@+id/tv_total_salary_bottom" />
+
+
+                <!-- Line 3  -->
+                <View
+                    android:id="@+id/line_3"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:alpha="0.5"
+                    android:background="@color/turquoise"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_index_3"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_index"
+                    app:layout_constraintTop_toTopOf="@+id/tv_index" />
+
+
+                <!--  Index -->
+                <TextView
+                    android:id="@+id/tv_index"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/turquoise"
+                    android:paddingTop="16sp"
+                    android:paddingBottom="16dp"
+                    android:text="م"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_total_salary_bottom"
+                    app:layout_constraintWidth_percent="0.2" />
+
+                <!-- Line 2  -->
+                <View
+                    android:id="@+id/line_2"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:alpha="0.5"
+                    android:background="@color/turquoise"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_index_3"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_index"
+                    app:layout_constraintTop_toTopOf="@+id/tv_index" />
+
+
+                <!--  Item -->
+                <TextView
+                    android:id="@+id/tv_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/turquoise"
+                    android:paddingTop="16sp"
+                    android:paddingBottom="16dp"
+                    android:text="البند"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_index"
+                    app:layout_constraintEnd_toStartOf="@+id/line_2"
+                    app:layout_constraintTop_toTopOf="@+id/tv_index"
+                    app:layout_constraintWidth_percent="0.35" />
+
+                <!-- Line 4  -->
+                <View
+                    android:id="@+id/line_4"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:alpha="0.5"
+                    android:background="@color/turquoise"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_index_3"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_item"
+                    app:layout_constraintTop_toTopOf="@+id/tv_item" />
+
+
+                <!--  Value -->
+                <TextView
+                    android:id="@+id/tv_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/turquoise"
+                    android:paddingTop="16sp"
+                    android:paddingBottom="16dp"
+                    android:text="القيمة"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_item"
+                    app:layout_constraintEnd_toStartOf="@+id/line_4"
+                    app:layout_constraintTop_toTopOf="@+id/tv_item"
+                    app:layout_constraintWidth_percent="0.35" />
+
+                <!-- Line 5  -->
+                <View
+                    android:id="@+id/line_5"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:alpha="0.5"
+                    android:background="@color/turquoise"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_index_3"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_value"
+                    app:layout_constraintTop_toTopOf="@+id/tv_value" />
+
+
+                <!--  Index 1 -->
+                <TextView
+                    android:id="@+id/tv_index_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16sp"
+                    android:paddingBottom="16dp"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toStartOf="@+id/line_3"
+                    app:layout_constraintStart_toEndOf="@+id/line_2"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_index"
+                    app:layout_constraintWidth_percent="0.2" />
+
+
+                <!--  Main salary label -->
+                <TextView
+                    android:id="@+id/tv_main_salary_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16sp"
+                    android:paddingBottom="16dp"
+                    android:text="مرتب اساسى"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toStartOf="@+id/line_2"
+                    app:layout_constraintStart_toEndOf="@+id/line_4"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_item"
+                    app:layout_constraintWidth_percent="0.35" />
+
+
+                <!--  Main salary -->
+                <TextView
+                    android:id="@+id/tv_main_salary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16sp"
+                    android:paddingBottom="16dp"
+                    android:text="673.23 ج"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toStartOf="@+id/line_4"
+                    app:layout_constraintStart_toStartOf="@+id/line_5"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_value"
+                    app:layout_constraintWidth_percent="0.35" />
+
+
+                <!--  Index 2 -->
+                <TextView
+                    android:id="@+id/tv_index_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blue_light"
+                    android:paddingTop="16sp"
+                    android:paddingBottom="16dp"
+                    android:text="2"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toStartOf="@+id/line_3"
+                    app:layout_constraintStart_toEndOf="@+id/line_2"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_index_1"
+                    app:layout_constraintWidth_percent="0.2" />
+
+
+                <!--  Work environment label -->
+                <TextView
+                    android:id="@+id/tv_work_environment_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:background="@color/blue_light"
+                    android:paddingTop="16sp"
+                    android:paddingBottom="16dp"
+                    android:text="طبيعة عمل"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_index_2"
+                    app:layout_constraintStart_toEndOf="@+id/line_4"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_main_salary_label"
+                    app:layout_constraintWidth_percent="0.35" />
+
+
+                <!--  Work environment -->
+                <TextView
+                    android:id="@+id/tv_work_environment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blue_light"
+                    android:paddingTop="16sp"
+                    android:paddingBottom="16dp"
+                    android:text="100.0 ج"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toStartOf="@+id/line_4"
+                    app:layout_constraintStart_toEndOf="@+id/line_5"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_main_salary"
+                    app:layout_constraintWidth_percent="0.35" />
+
+
+                <!--  Index 3 -->
+                <TextView
+                    android:id="@+id/tv_index_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/pink"
+                    android:paddingTop="16sp"
+                    android:paddingBottom="16dp"
+                    android:text="3"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toStartOf="@+id/line_3"
+                    app:layout_constraintStart_toEndOf="@+id/line_2"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_index_2"
+                    app:layout_constraintWidth_percent="0.2" />
+
+
+                <!--  Other deductions label -->
+                <TextView
+                    android:id="@+id/tv_other_deductions_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/pink"
+                    android:paddingTop="16sp"
+                    android:paddingBottom="16dp"
+                    android:text="استقطاعات اخرى"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toStartOf="@+id/line_2"
+                    app:layout_constraintStart_toEndOf="@+id/line_4"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_work_environment_label"
+                    app:layout_constraintWidth_percent="0.35" />
+
+
+                <!--   Other deductions -->
+                <TextView
+                    android:id="@+id/tv_other_deductions"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/pink"
+                    android:paddingTop="16sp"
+                    android:paddingBottom="16dp"
+                    android:text="1120.43 ج"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toStartOf="@+id/line_4"
+                    app:layout_constraintStart_toEndOf="@+id/line_5"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_work_environment"
+                    app:layout_constraintWidth_percent="0.35" />
+
+
+                <!-- Bottom Line of table -->
+                <View
+                    android:id="@+id/bottom_line"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:alpha="0.5"
+                    android:background="@color/turquoise"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_index_3"
+                    app:layout_constraintStart_toStartOf="@+id/tv_other_deductions"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_other_deductions_label"
+                    />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
